@@ -3,16 +3,17 @@
 def selectionSort(someList):
 	for slot in range(len(someList)-1,0,-1):
 		# working bacwards
-		positionOfMax=0
+		# hold the index of the highest number
+		indexOfMax=0
 		# Find where the max value is
-		for location in range(1,slot+1):
-			if someList[location]>someList[positionOfMax]:
-				positionOfMax = location
+		for sortLocation in range(1,slot+1):
+			if someList[sortLocation]>someList[indexOfMax]:
+				indexOfMax = sortLocation
 
 			# preform the swap of values
 			tempValue = someList[slot]
-			someList[slot] = someList[positionOfMax]
-			someList[positionOfMax] = tempValue
+			someList[slot] = someList[indexOfMax]
+			someList[indexOfMax] = tempValue
 
 
 
