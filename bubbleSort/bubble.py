@@ -4,6 +4,7 @@
 def bubbleSort(someList):
 	for runNumber in range(len(someList)-1,0,-1):
 		# we are going to step backwards through the list
+		# range(start, stop[, step])
 		for index in range(runNumber):
 			if someList[index]>someList[index + 1]:
 				tempValue = someList[index]
